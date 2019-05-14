@@ -17,7 +17,7 @@ namespace waldo.Domain
                 new Character
                 {
                     Name = "Carmen",
-                    Description = "Likes to wear red."
+                    Description = "She likes to wear red."
                 }
             };
         }
