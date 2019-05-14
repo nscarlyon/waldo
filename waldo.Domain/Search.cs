@@ -26,6 +26,14 @@ namespace waldo.Domain
                 };
             }
 
+            if (lowerLocationName == "kings landing" && lowerCharacterName == "daenerys")
+            {
+                return new SearchResponse
+                {
+                    Message = "You found Waldo!"
+                };
+            }
+
             if (lowerCharacterName == "waldo" || lowerCharacterName == "carmen")
             {
                 return new SearchResponse
