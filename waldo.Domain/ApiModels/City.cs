@@ -1,5 +1,5 @@
 ﻿
-namespace waldo.Domain
+namespace waldo.Domain.ApiModels
 {
     public class City
     {

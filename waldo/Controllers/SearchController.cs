@@ -9,11 +9,11 @@
 //    [ApiController]
 //    public class SearchController : ControllerBase
 //    {
-//        private Search _search;
+//        private SearchDomain _searchDomain;
 
-//        public SearchController()
+//        public SearchController(SearchDomain searchDomain)
 //        {
-//            _search = new Search();
+//            _searchDomain = searchDomain;
 //        }
 
 //        /// <summary>
@@ -25,7 +25,7 @@
 //        [HttpGet]
 //        public IActionResult Get([FromQuery, Required] string character, [FromQuery, Required] string location)
 //        {
-//            var response = _search.ForCharacterByLocation(character, location);
+//            var response = _searchDomain.ForCharacterByLocation(character, location);
 //            if (response == null) return NotFound();
 //            return Ok(response);
 //        }

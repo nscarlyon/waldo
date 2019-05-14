@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using waldo.Domain;
 
 namespace waldo
 {
@@ -20,6 +21,10 @@ namespace waldo
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc();
+            services.AddTransient<CitiesDomain, CitiesDomain>();
+            services.AddTransient<CharactersDomain, CharactersDomain>();
+            //services.AddTransient<SearchDomain, SearchDomain>();
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

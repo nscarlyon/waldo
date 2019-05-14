@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using waldo.Domain;
+using waldo.Domain.ApiModels;
 
 namespace waldo.Web.Controllers
 {
@@ -9,17 +10,17 @@ namespace waldo.Web.Controllers
     [Route("api/[controller]")]
     public class CitiesController : ControllerBase
     {
-        private Cities _cities;
+        private CitiesDomain _citiesDomain;
 
-        public CitiesController()
+        public CitiesController(CitiesDomain citiesDomain)
         {
-            _cities = new Cities();
+            _citiesDomain = citiesDomain;
         }
 
         [HttpGet]
         public CitiesResponse Get()
         {
-            return _cities.GetCities();
+            return _citiesDomain.GetCities();
         }
 
         [HttpGet("{id}")]
@@ -27,7 +28,7 @@ namespace waldo.Web.Controllers
         [ProducesResponseType(404)]
         public IActionResult Get(string id)
         {
-            var city = _cities.GetCity(id);
+            var city = _citiesDomain.GetCity(id);
             if (city == null) return NotFound();
             return Ok(city);
         }
@@ -35,13 +36,13 @@ namespace waldo.Web.Controllers
         [HttpPost]
         public City Post([FromBody] City request)
         {
-            return _cities.CreateCity(request);
+            return _citiesDomain.CreateCity(request);
         }
 
         [HttpPut("{id}")]
         public City Put(int id, [FromBody] City request)
         {
-            return _cities.UpdateCity(request);
+            return _citiesDomain.UpdateCity(request);
         }
 
         [HttpDelete("{id}")]
@@ -54,13 +55,13 @@ namespace waldo.Web.Controllers
         [HttpGet("find-waldo/{cityName}")]
         public FindWaldoResponse FindWaldo(string cityName)
         {
-            return _cities.FindWaldo(cityName);
+            return _citiesDomain.FindWaldo(cityName);
         }
 
         [HttpGet("{where-is-waldo}")]
         public FindWaldoResponse WhereIsWaldo()
         {
-            return _cities.WhereIsWaldo();
+            return _citiesDomain.WhereIsWaldo();
         }
     }
 }

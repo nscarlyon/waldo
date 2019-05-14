@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace waldo.Domain
+namespace waldo.Domain.ApiModels
 {
     public class CitiesResponse
     {

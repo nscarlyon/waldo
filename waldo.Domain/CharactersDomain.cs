@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using waldo.Domain.ApiModels;
 
 namespace waldo.Domain
 {
-    public class Characters
+    public class CharactersDomain
     {
         public List<Character> GetCharacter()
         {

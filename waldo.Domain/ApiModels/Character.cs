@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace waldo.Domain
+﻿namespace waldo.Domain.ApiModels
 {
     public class Character
     {

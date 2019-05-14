@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Text;
+using waldo.Domain.ApiModels;
 
 namespace waldo.Domain
 {
-    public class Search
+    public class SearchDomain
     {
         public SearchResponse ForCharacterByLocation(string characterName, string locationName)
         {

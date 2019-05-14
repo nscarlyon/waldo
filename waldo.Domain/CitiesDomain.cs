@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using waldo.Domain.ApiModels;
 
 namespace waldo.Domain
 {
-    public class Cities
+    public class CitiesDomain
     {
         public CitiesResponse GetCities()
         {

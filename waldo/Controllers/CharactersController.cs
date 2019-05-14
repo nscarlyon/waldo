@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using waldo.Domain;
+using waldo.Domain.ApiModels;
 
 namespace waldo.Web.Controllers
 {
@@ -9,23 +10,23 @@ namespace waldo.Web.Controllers
     [Route("api/[controller]")]
     public class CharactersController : ControllerBase
     {
-        private readonly Characters _characters;
+        private readonly CharactersDomain _charactersDomain;
 
-        public CharactersController()
+        public CharactersController(CharactersDomain charactersDomain)
         {
-            _characters = new Characters();    
+            _charactersDomain = charactersDomain;    
         }
 
         [HttpGet]
         public IEnumerable<Character> Get()
         {
-            return _characters.GetCharacter();
+            return _charactersDomain.GetCharacter();
         }
 
         [HttpGet("{id}", Name = "Get")]
         public IActionResult Get(string id)
         {
-            var person = _characters.GetCharacter(id);
+            var person = _charactersDomain.GetCharacter(id);
             if (person == null) return NotFound();
             return Ok(person);
         }
@@ -33,19 +34,19 @@ namespace waldo.Web.Controllers
         [HttpPost]
         public Character Post([FromBody] Character request)
         {
-            return _characters.CreatePerson(request);
+            return _charactersDomain.CreatePerson(request);
         }
 
         [HttpPut("{id}")]
         public Character Put(int id, [FromBody] Character request)
         {
-            return _characters.UpdateCharacter(request);
+            return _charactersDomain.UpdateCharacter(request);
         }
 
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
-            _characters.DeleteCharacter(id);
+            _charactersDomain.DeleteCharacter(id);
         }
     }
 }
