@@ -31,7 +31,7 @@ namespace waldo.Domain
             {
                 return new SearchResponse
                 {
-                    Message = "You found Waldo!"
+                    Message = "You found Daenerys! Run away!"
                 };
             }
 

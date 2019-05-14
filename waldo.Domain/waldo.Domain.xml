@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <Name>waldo.Domain</Name>
+    </assembly>
+    <members>
+        <member Name="P:waldo.Domain.ApiModels.City.Name">
+            <summary>
+            The Name of the city
+            </summary>
+            <example>Atlanta</example>
+        </member>
+        <member Name="P:waldo.Domain.ApiModels.City.state">
+            <summary>
+            The Name of the state
+            </summary>
+            <example>Georgia</example>
+        </member>
+    </members>
+</doc>

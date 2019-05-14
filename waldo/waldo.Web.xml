@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <Name>waldo.Web</Name>
+    </assembly>
+    <members>
+        <member Name="M:waldo.ConfigureSwaggerOptions.#ctor(Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:waldo.ConfigureSwaggerOptions"/> class.
+            </summary>
+            <param Name="provider">The <see cref="T:Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider">provider</see> used to generate Swagger documents.</param>
+        </member>
+        <member Name="M:waldo.ConfigureSwaggerOptions.Configure(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)">
+            <inheritdoc />
+        </member>
+        <member Name="M:waldo.Web.Controllers.CitiesController.GetCity(System.String)">
+            <summary>
+            Gets city by city Name.
+            </summary>
+            <remarks>Pertinent info here</remarks>
+            <param Name="id">Ex: Name of city</param>
+            <returns>A city object</returns>
+            <response code="404">Invalid/missing city Name</response>
+        </member>
+        <member Name="M:waldo.Web.Controllers.CitiesController.FindWaldo(System.String)">
+            <summary>
+            This endpoint is obsolete. Use the search endpoint.
+            </summary>
+            <param Name="cityName"></param>
+            <returns></returns>
+        </member>
+        <member Name="M:waldo.Web.Controllers.SearchController.Get(System.String,System.String)">
+            <summary>
+            This searches for a character in a specific location.
+            </summary>
+            <param Name="character">Ex: Waldo, Carmen, Billy Bob</param>
+            <param Name="location">Ex: Atlanta, San Diego, Hot Springs</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

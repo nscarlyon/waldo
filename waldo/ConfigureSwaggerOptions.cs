@@ -13,7 +13,7 @@
 //        /// <summary>
 //        /// Initializes a new instance of the <see cref="ConfigureSwaggerOptions"/> class.
 //        /// </summary>
-//        /// <param name="provider">The <see cref="IApiVersionDescriptionProvider">provider</see> used to generate Swagger documents.</param>
+//        /// <param Name="provider">The <see cref="IApiVersionDescriptionProvider">provider</see> used to generate Swagger documents.</param>
 //        public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider) => this.provider = provider;
 
 //        /// <inheritdoc />

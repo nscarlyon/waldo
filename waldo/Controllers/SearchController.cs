@@ -19,8 +19,8 @@
 //        /// <summary>
 //        /// This searches for a character in a specific location.
 //        /// </summary>
-//        /// <param name="character">Ex: Waldo, Carmen, Billy Bob</param>
-//        /// <param name="location">Ex: Atlanta, San Diego, Hot Springs</param>
+//        /// <param Name="character">Ex: Waldo, Carmen, Billy Bob</param>
+//        /// <param Name="location">Ex: Atlanta, San Diego, Hot Springs</param>
 //        /// <returns></returns>
 //        [HttpGet]
 //        public IActionResult Get([FromQuery, Required] string character, [FromQuery, Required] string location)

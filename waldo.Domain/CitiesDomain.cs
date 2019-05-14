@@ -13,28 +13,28 @@ namespace waldo.Domain
                 {
                     new City
                     {
-                        name = "Atlanta",
-                        state = "Georgia"
+                        Name = "Atlanta",
+                        State = "Georgia"
                     },
                     new City
                     {
-                        name = "Duluth",
-                        state = "Georgia",
+                        Name = "Duluth",
+                        State = "Georgia",
                     },
                     new City
                     {
-                        name = "Phoenix",
-                        state = "Arizona"
+                        Name = "Phoenix",
+                        State = "Arizona"
                     },
                     new City
                     {
-                        name = "Scottsdale",
-                        state = "Arizona"
+                        Name = "Scottsdale",
+                        State = "Arizona"
                     },
                     new City
                     {
-                        name = "San Diego",
-                        state = "California"
+                        Name = "San Diego",
+                        State = "California"
                     }
                 }
             };
@@ -49,16 +49,16 @@ namespace waldo.Domain
             {
                 return new City
                 {
-                    name = "Atlanta",
-                    state = "Georgia"
+                    Name = "Atlanta",
+                    State = "Georgia"
                 };
             }
             if (lower == "cumming")
             {
                 return new City
                 {
-                    name = "Cumming",
-                    state = "Georgia"
+                    Name = "Cumming",
+                    State = "Georgia"
                 };
             }
 
@@ -69,8 +69,8 @@ namespace waldo.Domain
         {
             return new City
             {
-                name = request.name,
-                state = request.state
+                Name = request.Name,
+                State = request.State
             };
         }
 
@@ -78,8 +78,8 @@ namespace waldo.Domain
         {
             return new City
             {
-                name = request.name,
-                state = request.state
+                Name = request.Name,
+                State = request.State
             };
         }
 
