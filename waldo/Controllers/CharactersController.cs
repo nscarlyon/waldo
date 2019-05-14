@@ -18,12 +18,12 @@ namespace waldo.Web.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Character> Get()
+        public IEnumerable<Character> GetCharacters()
         {
             return _charactersDomain.GetCharacter();
         }
 
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetCharacter")]
         public IActionResult Get(string id)
         {
             var person = _charactersDomain.GetCharacter(id);

@@ -24,7 +24,6 @@ namespace waldo
             services.AddTransient<CitiesDomain, CitiesDomain>();
             services.AddTransient<CharactersDomain, CharactersDomain>();
             //services.AddTransient<SearchDomain, SearchDomain>();
-
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

@@ -18,7 +18,7 @@ namespace waldo.Web.Controllers
         }
 
         [HttpGet]
-        public CitiesResponse Get()
+        public CitiesResponse GetCities()
         {
             return _citiesDomain.GetCities();
         }
@@ -26,7 +26,7 @@ namespace waldo.Web.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(City), StatusCodes.Status200OK)]
         [ProducesResponseType(404)]
-        public IActionResult Get(string id)
+        public IActionResult GetCity(string id)
         {
             var city = _citiesDomain.GetCity(id);
             if (city == null) return NotFound();
