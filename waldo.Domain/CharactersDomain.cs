@@ -12,7 +12,7 @@ namespace waldo.Domain
                 new Character
                 {
                     Name = "Waldo",
-                    Description = "When is he seen, he is wearing a red and white striped shirt and hat."
+                    Description = "He is wearing a red and white striped shirt and hat."
                 },
                 new Character
                 {
